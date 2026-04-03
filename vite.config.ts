@@ -1,5 +1,4 @@
 import { defineConfig } from "vite";
-import preact from "@preact/preset-vite";
 import * as fs from "fs/promises";
 import { placeWord } from "./src/element-decoder/word-placement";
 
@@ -20,7 +19,7 @@ async function getWordList(): Promise<string[]> {
    */
   const response = await fetch("https://graphql.datocms.com/", {
     headers: {
-          authorization: "Bearer 306d97cc36416136dec1925240ef29",
+      authorization: "Bearer 306d97cc36416136dec1925240ef29",
       "content-type": "application/json",
     },
     body: '{"query":"{\\n  wordList{\\n    words\\n  }\\n}","variables":null}',
@@ -90,15 +89,15 @@ export default defineConfig({
   define: {
     "import.meta.vitest": "undefined",
   },
-  plugins: [preact(), wordListPlugin()],
+  plugins: [wordListPlugin()],
   test: {
     includeSource: ["src/**/*.ts", "src/**/*.tsx"],
   },
   build: {
     rollupOptions: {
       input: [
-            "element-decoder/index.html",
-            "compound-decoder/index.html",
+        "element-decoder/index.html",
+        "compound-decoder/index.html",
         "ionic-tetris/index.html",
         "index.html",
       ],

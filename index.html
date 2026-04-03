@@ -1,110 +1,18 @@
 <!DOCTYPE html>
-<!-- Webpage designed by Immanuel and others for Hewitt Learning-->
 <html lang="en">
   <head>
-    <title>Hewitt Learning</title>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="./homepage.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Hewitt Learning Games</title>
   </head>
-
   <body>
-    <nav>
-      <img src="/images/Hewitt_Logo.png" alt="" class="logo">
-    </nav>
-    <div class="main-container">
-      
-
-      <div class="row">
-        <!-- row for element decoder -->
-        <div class="row-content">
-          <a href="./element-decoder/">
-            <div class="project-box">
-              <div
-                class="img"
-                style="
-                  background: #ffffff url(/images/element-decoder-new.png) center
-                    bottom no-repeat;
-                  background-size: 300px;
-                "
-              ></div>
-              <div class="body">
-                <div class="heading">Element Decoder</div>
-                <div class="content sub">
-                Build familiarity with the periodic table by playing a “word discovery” game with clues that eventually reveal a hidden word. As you advance through three different levels, you build the ability to reference the table much more quickly, a needed skill as you advance in chemistry.
-                </div>
-                <span class="underline-d"></span>
-                <div class="info sub">2023, Hewitt Learning</div>
-              </div>
-            </div>
-          </a>
-        </div>
-        <!-- row for compound decoder -->
-        <div class="row-content">
-          <a href="./compound-decoder/">
-            <div class="project-box">
-              <div
-                class="img"
-                style="
-                  background: #ffffff url(/images/compound-decoder.png) center
-                    bottom no-repeat;
-                  background-size: 300px;
-                "
-              ></div>
-              <div class="body">
-                <div class="heading">Compound Decoder</div>
-                <div class="content sub">
-                Build familiarity with the periodic table by playing a “word discovery” game with clues that eventually reveal a hidden word. As you advance through three different levels, you build the ability to reference the table much more quickly, a needed skill as you advance in chemistry.
-                </div>
-                <span class="underline-d"></span>
-                <div class="info sub">2024, Hewitt Learning</div>
-              </div>
-            </div>
-          </a>
-        </div>
-        
-<!--Disabling ionic-tetris
-        <div class="row-content">
-          <a href="/ionic-tetris/">
-            <div class="project-box">
-              <div
-                class="img"
-                style="
-                  background: #ffffff url(/images/ionic-tetris.png) center
-                    bottom no-repeat;
-                  background-size: 200px;
-                "
-              ></div>
-              <div class="body">
-                <div class="heading">Ionic Tetris</div>
-                <div class="content sub">
-                  Guide the falling ions into the right ionic compounds!
-                </div>
-                <span class="underline-d"></span>
-                <div class="info sub">2023, Hewitt Learning</div>
-              </div>
-            </div>
-          </a>
-        </div>
-    -->
-      </div>
-    </div>
-    <footer>
-      <div>
-        <p class="copyright-date">Hewitt Learning, © 2024</p>
-      </div>
-    </footer>
-    <script>
-      document.body.addEventListener("pointermove", (e) => {
-        const { currentTarget: el, clientX: x, clientY: y } = e;
-        const {
-          top: t,
-          left: l,
-          width: w,
-          height: h,
-        } = el.getBoundingClientRect();
-        el.style.setProperty("--posX", x - l - w / 2.5);
-        el.style.setProperty("--posY", y - t - h / 2.5);
-      });
-    </script>
+    <div id="app"></div>
+    <script type="module" src="/src/portal/main.tsx"></script>
   </body>
 </html>
