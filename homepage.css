@@ -14,7 +14,7 @@
 }
 
 html {
-  font-family: "Source Sans Pro";
+  font-family: "mozaic-geo-variable", "Mozaic GEO Variable Regular", "Source Sans Pro", sans-serif;
   background: #f9f9f9;
   text-rendering: optimizeLegibility;
   color: #333;
