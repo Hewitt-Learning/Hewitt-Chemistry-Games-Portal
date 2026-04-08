@@ -33,7 +33,9 @@ export function FilterPanel({
 		marginBottom: 8,
 		color: "#1f3f7f",
 		fontWeight: 600,
+		fontFamily: "'Manrope', 'Segoe UI', sans-serif",
 		fontSize: isMobile ? 13 : 15,
+		letterSpacing: "0.01em",
 	};
 
 	// For collapsible mobile filter groups
@@ -52,6 +54,9 @@ export function FilterPanel({
 		padding: "10px 12px",
 		fontSize: 14,
 		fontWeight: 700,
+		fontFamily: "'Mozaic GEO Variable', 'Manrope', sans-serif",
+		textTransform: "uppercase",
+		letterSpacing: "0.04em",
 		color: "#1f3f7f",
 		display: "flex",
 		justifyContent: "space-between",
@@ -76,6 +81,7 @@ export function FilterPanel({
 				maxHeight: isMobile ? "none" : "calc(100% - 16px)",
 				overflowY: "auto",
 				marginBottom: isMobile ? 12 : 0,
+				
 			}}
 		>
 			{/* Search sits at the top so users can filter immediately */}

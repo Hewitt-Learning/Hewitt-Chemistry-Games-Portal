@@ -12,12 +12,12 @@ interface GameCardProps {
 const tagStyle = {
 	background: "rgba(245, 250, 255, 0.95)",
 	borderRadius: 999,
-	color: "#2b4f85",
+	color: "#065759",
 	fontWeight: 600,
 	fontSize: 12,
 	padding: "6px 12px",
 	lineHeight: 1,
-	border: "1px solid rgba(187, 201, 232, 0.7)",
+	border: "1px solid rgba(4, 153, 149, 0.25)",
 };
 
 export function GameCard({ game }: GameCardProps) {
@@ -42,7 +42,7 @@ export function GameCard({ game }: GameCardProps) {
 				height: "clamp(320px, 32vw, 380px)",
 				borderRadius: 16,
 				overflow: "hidden",
-				background: "linear-gradient(160deg, #eef3fa 0%, #dce5f2 45%, #d6dee9 100%)",
+				background: "linear-gradient(160deg, #eef8f8 0%, #dceeee 45%, #d1e5e5 100%)",
 				color: "inherit",
 				boxShadow: hovered
 					? "0 16px 32px rgba(24, 48, 93, 0.2)"
@@ -109,7 +109,7 @@ export function GameCard({ game }: GameCardProps) {
 					height: "42%",
 					backgroundPosition: "center bottom",
 					backgroundRepeat: "no-repeat",
-					backgroundSize: "clamp(140px, 26vw, 220px)",
+					backgroundSize: "contain", // helps make the image bigger on the game card
 					backgroundImage: game.imageUrl ? `url(${game.imageUrl})` : undefined,
 				}}
 			/>
@@ -117,7 +117,7 @@ export function GameCard({ game }: GameCardProps) {
 			<div
 				style={{
 					// Bottom dark section that holds the game title.
-					background: "linear-gradient(175deg, #2a3b52 0%, #243247 100%)",
+					background: "linear-gradient(175deg, #065759 0%, #043f41 100%)",
 					minHeight: "clamp(160px, 24vw, 190px)",
 					height: "58%",
 					padding: "14px 14px 18px",
@@ -157,7 +157,7 @@ export function GameCard({ game }: GameCardProps) {
 					// Slide-up description, where the hover or i button can show the descruption with overlay
 					position: "absolute",
 					inset: 0,
-					background: "rgba(31, 48, 72, 0.97)",
+					background: "rgba(6, 87, 89, 0.96)",
 					color: "#dbe9ff",
 					display: "flex",
 					flexDirection: "column",
@@ -177,9 +177,13 @@ export function GameCard({ game }: GameCardProps) {
 					style={{
                         // for game names
 						margin: 0,
+						fontFamily: "'Mozaic GEO Variable', 'Manrope', sans-serif",
 						fontSize: "clamp(24px, 2.6vw, 34px)",
+						fontWeight: 700,
 						color: "#e8f5ff",
 						lineHeight: 1.02,
+						letterSpacing: "0.02em",
+						textTransform: "uppercase",
 						maxWidth: "100%",
 						overflowWrap: "anywhere",
 					}}
@@ -190,10 +194,12 @@ export function GameCard({ game }: GameCardProps) {
 					style={{
                         // for descriptions
 						margin: "14px 0 0",
-						fontSize: 17,
-						lineHeight: 1.42,
+						fontFamily: "'Manrope', 'Segoe UI', sans-serif",
+						fontSize: 16,
+						fontWeight: 500,
+						lineHeight: 1.6,
+						color: "#dcecec",
 						maxWidth: 360,
-						color: "#e3ecff",
 					}}
 				>
 					{game.description}

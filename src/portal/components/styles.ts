@@ -5,11 +5,13 @@ import type { CSSProperties } from "react";
 export const cardTitleStyle: CSSProperties = {
   margin: 0,
   textAlign: "center",
-  fontSize: "clamp(16px, 6vw, 28px)",
-  letterSpacing: 0,
-  color: "#ecf3ff",
-  lineHeight: 1.12,
-  fontWeight: 700,
+	fontFamily: "'Mozaic GEO Variable', 'Manrope', sans-serif",
+	fontSize: "clamp(18px, 5vw, 30px)",
+	letterSpacing: "0.03em",
+	color: "#ecfdfd",
+	lineHeight: 1.08,
+	fontWeight: 700,
+	textTransform: "uppercase",
   maxWidth: "100%",
   overflowWrap: "anywhere",
 };

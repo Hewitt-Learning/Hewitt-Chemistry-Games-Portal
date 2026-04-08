@@ -12,10 +12,12 @@ export function PortalHeader({ isMobile = false }: PortalHeaderProps) {
 	return (
 		<header
 			style={{
-				borderBottom: "1px solid #d7dfeb",
+				borderBottom: "1px solid #cfe0e0",
 				padding: isMobile ? "8px 12px 8px" : "14px 22px 12px", // TODO: learn better how to make it mobile friendly WITHOUT hardcoding pixel sizes
 				background: "rgba(255,255,255,0.9)",
 				backdropFilter: "blur(6px)",
+				height: isMobile ? 120 : 160, // keeps header from growing
+				overflow: "visible",
 			}}
 		>
 			<a
@@ -23,7 +25,8 @@ export function PortalHeader({ isMobile = false }: PortalHeaderProps) {
 				onClick={(event) => event.preventDefault()}
 				style={{
 					// This is currently a placeholder back link to go back to the hewitt learning website
-					color: "#2d4674",
+					fontFamily: "'Manrope', 'Segoe UI', sans-serif",
+					color: "#065759",
 					textDecoration: "none",
 					fontWeight: 600,
 					display: "inline-flex",
@@ -41,25 +44,29 @@ export function PortalHeader({ isMobile = false }: PortalHeaderProps) {
 					display: "flex",
 					justifyContent: "center",
 					alignItems: "center",
-					gap: isMobile ? 14 : 44,
+					gap: isMobile ? 14 : 40,
 					flexWrap: "wrap",
 				}}
 			>
 				<img
-					src="/images/Hewitt_Logo.png"
-					alt="Hewitt Learning"
+					src="/images/Ceiba_Logo.png"
+					alt="Ceiba Connections"
 					// Smaller logo on mobile to preserve vertical space
-					style={{ height: isMobile ? 56 : 120, objectFit: "contain" }}
+					style={{ height: isMobile ? 56 : 180, objectFit: "contain", marginTop: isMobile ? -10 : -40}}
+
 				/>
 				<h1
 					style={{
-						margin: 0,
-						fontSize: isMobile ? "clamp(28px, 10vw, 42px)" : "clamp(44px, 7vw, 82px)",
-						color: "#325385",
-						letterSpacing: isMobile ? 0.3 : 0.8,
+						margin: -70, // nudges the text up to be more vertically centered with the logo (since the logo has extra whitespace)
+						fontFamily: "'mozaic-geo-variable', sans-serif",
+						fontSize: isMobile ? "clamp(28px, 10vw, 42px)" : "clamp(44px, 7vw, 80px)",
+						color: "#065759",
+						letterSpacing: isMobile ? 0.8 : 1.2,
 						lineHeight: 1,
-						fontWeight: 800,
-						textShadow: "0 4px 14px rgba(33, 64, 110, 0.14)",
+						fontWeight: 600,
+						textTransform: "uppercase",
+						textShadow: "0 4px 14px rgba(6, 87, 89, 0.14)",
+						
 					}}
 				>
 					Games

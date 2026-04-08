@@ -19,12 +19,14 @@ export function PortalButton({
 			onClick={onClick}
 			style={{
 				width: "100%",
-				border: "1px solid #274c94",
-				background: "linear-gradient(135deg, #2b56a6 0%, #1f4386 100%)",
+				fontFamily: "'Mozaic GEO Variable', 'Manrope', sans-serif",
+				textTransform: "uppercase",
+				border: "1px solid #065759",
+				background: "linear-gradient(135deg, #049995 0%, #065759 100%)",
 				color: "#f4f7ff",
 				padding: compact ? "8px 8px" : "10px 8px",
 				marginTop: 10,
-				letterSpacing: 0.3,
+				letterSpacing: "0.08em",
 				fontSize: compact ? 16 : 18,
 				fontWeight: 700,
 				cursor: "pointer",

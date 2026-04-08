@@ -67,9 +67,9 @@ export function PortalApp() {
 				display: "flex",
 				flexDirection: "column",
 				background:
-					"radial-gradient(circle at 12% 0%, #f6fbff 0%, #f5f6fb 42%, #f3f4f9 100%)",
-				color: "#1f2a44",
-				fontFamily: "Manrope, Avenir Next, Segoe UI, sans-serif",
+  					"radial-gradient(circle at 12% 0%, #f5fbfb 0%, #eef7f7 45%, #e6f1f1 100%)",
+				color: "#163536",
+				fontFamily: "Manrope, Segoe UI, sans-serif",
 				overflowX: "hidden",
 			}}
 		>
@@ -80,7 +80,7 @@ export function PortalApp() {
 					flex: 1,
 					minHeight: 0,
 					width: "100%",
-					maxWidth: 1460,
+					maxWidth: 1570,
 					margin: "0 auto",
 					padding: isMobile ? "10px 10px 22px" : "20px 18px 28px",
 					boxSizing: "border-box",
@@ -89,6 +89,7 @@ export function PortalApp() {
 					gap: isMobile ? undefined : 20,
 					gridTemplateColumns: isMobile ? "1fr" : "320px minmax(0, 1fr)",
 					alignItems: "start",
+					justifyContent: isMobile ? undefined : "start",
 					// Desktop scrolls inside this area; mobile scrolls the page
 					overflowY: isMobile ? "visible" : "auto",
 				}}

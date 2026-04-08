@@ -18,10 +18,10 @@ export const GAMES: PortalGame[] = [
 	},
 	{
 		id: "compound-decoder",
-		name: "CHEMISTRY",
+		name: "Compound Decoder",
 		description:
 			"Practice compounds and chemistry naming patterns with clue-driven rounds designed for repetition and mastery.",
-		subject: "STEM",
+		subject: "CHEMISTRY",
 		age: "12+",
 		href: "/compound-decoder/",
 		imageUrl: "/images/compound-decoder.png",
