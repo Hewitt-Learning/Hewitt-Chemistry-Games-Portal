@@ -69,7 +69,8 @@ export function PortalApp() {
 				background:
 					"radial-gradient(circle at 12% 0%, #f6fbff 0%, #f5f6fb 42%, #f3f4f9 100%)",
 				color: "#1f2a44",
-				fontFamily: "Manrope, Avenir Next, Segoe UI, sans-serif",
+				fontFamily:
+					'"mozaic-geo-variable", "Mozaic GEO Variable Regular", "Manrope", "Avenir Next", "Segoe UI", sans-serif',
 				overflowX: "hidden",
 			}}
 		>
