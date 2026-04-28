@@ -37,5 +37,3 @@ ts-dist/
 backend/instance/
 backend/__pycache__/
 backend/**/*.pyc
-.venv/
-venv/
