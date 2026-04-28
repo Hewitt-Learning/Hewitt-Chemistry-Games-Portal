@@ -1,15 +1,12 @@
 /** @jsxImportSource react */
-import { useState } from "react";
-import { SUBJECT_LABELS } from "../types";
+import React, { useState } from "react";
 import type { PortalGame } from "../types";
-import { cardTitleStyle } from "./styles";
 
 interface GameCardProps {
 	game: PortalGame;
 }
 
-// for the age and subject tags
-const tagStyle = {
+const tagStyle: React.CSSProperties = {
 	background: "rgba(245, 250, 255, 0.95)",
 	borderRadius: 999,
 	color: "#065759",
@@ -18,6 +15,7 @@ const tagStyle = {
 	padding: "6px 12px",
 	lineHeight: 1,
 	border: "1px solid rgba(4, 153, 149, 0.25)",
+	marginRight: 6,
 };
 
 export function GameCard({ game }: GameCardProps) {
@@ -98,7 +96,7 @@ export function GameCard({ game }: GameCardProps) {
 			>
 				<span style={tagStyle}>{game.age}</span>
 				<span style={{ ...tagStyle, marginLeft: "auto", marginRight: 34 }}>
-					{SUBJECT_LABELS[game.subject]}
+					{game.subject}
 				</span>
 			</div>
 
@@ -139,7 +137,7 @@ export function GameCard({ game }: GameCardProps) {
 						boxSizing: "border-box",
 					}}
 				>
-					<h3 style={cardTitleStyle}>{game.name}</h3>
+					<h3 style={{ margin: 0, fontSize: 18 }}>{game.name}</h3>
 				</div>
 				<p
 					style={{
@@ -172,10 +170,9 @@ export function GameCard({ game }: GameCardProps) {
 					zIndex: 3,
 				}}
 			>
-                
 				<h4
 					style={{
-                        // for game names
+						// for game names
 						margin: 0,
 						fontFamily: "'Mozaic GEO Variable', 'Manrope', sans-serif",
 						fontSize: "clamp(24px, 2.6vw, 34px)",
@@ -192,7 +189,7 @@ export function GameCard({ game }: GameCardProps) {
 				</h4>
 				<p
 					style={{
-                        // for descriptions
+						// for descriptions
 						margin: "14px 0 0",
 						fontFamily: "'Manrope', 'Segoe UI', sans-serif",
 						fontSize: 16,
@@ -208,3 +205,5 @@ export function GameCard({ game }: GameCardProps) {
 		</a>
 	);
 }
+
+export default GameCard;

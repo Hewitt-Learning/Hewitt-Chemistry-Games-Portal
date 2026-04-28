@@ -23,7 +23,7 @@ html {
 }
 
 body {
-  height: 100vh;
+  min-height: 100vh;
   margin: 0;
   --x: calc(var(--posX, 0) * 1px);
   --y: calc(var(--posY, 0) * 1px);
@@ -342,4 +342,37 @@ footer {
   color: black;
   background: white;
   text-align: center;
+}
+
+@media (max-width: 900px) {
+  /* Allow sticky inside the top-level flex root that had inline styles */
+  body > div[style*="min-height: 100vh"] {
+    overflow: visible !important;
+    overflow-x: visible !important;
+    overflow-y: visible !important;
+    transform: none !important;
+  }
+
+  /* Mobile search wrapper: use CSS sticky so it pins under header when scrolling */
+  .mobile-search-wrapper {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 137px; /* header bottom from your page (update if header height changes) */
+    z-index: 10000;
+    background: rgba(255,255,255,0.95);
+    padding-top: 8px;
+    padding-bottom: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  }
+
+  /* spacer kept for flow when needed; leave 0 by default */
+  .mobile-search-spacer {
+    height: 0;
+  }
+
+  /* ensure native inline search displays when not pinned */
+  .native-search-wrapper { display: none; }
+  .mobile-search-inline { display: block; }
+  .mobile-search-fixed { display: block; }
+  .mobile-search-spacer { transition: height 120ms ease; }
 }
