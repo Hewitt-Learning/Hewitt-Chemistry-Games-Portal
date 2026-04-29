@@ -35,7 +35,9 @@ ts-dist/
 
 # Python backend artifacts
 backend/instance/
+backend/app/__pycache__/
 backend/__pycache__/
+backend/migrations/__pycache__/
 backend/**/*.pyc
 .venv/
 venv/
